@@ -1,0 +1,66 @@
+dn: dc=springframework,dc=org
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: springframework
+
+dn: ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=subgroups,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: subgroups
+
+dn: ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=arasa,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Arasa User
+sn: User
+uid: arasa
+userPassword: $2a$12$UdjvtnHJFFTR9/NVZ.V7t.1tIs/ap9GBRX0K.LIAK2LK5ZF10HUlu
+
+dn: uid=sethu,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Sethu User
+sn: User
+uid: sethu
+userPassword: $2a$12$LnxZHSynuXv33z7plOoYwOhNHCs1VSYIiim/s8.T5hA4ZPDMR5vfy
+
+dn: uid=cibi,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Cibi User
+sn: User
+uid: cibi
+userPassword: $2a$12$mBqqTvQKfUY83Vbbe8gBe.qIr7o/lZI7uCVHgH1jyWuRf30szmhVm
+
+dn: cn=flashcards,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: flashcards
+ou: flashcard
+uniqueMember: uid=arasa,ou=people,dc=springframework,dc=org
+uniqueMember: uid=cibi,ou=people,dc=springframework,dc=org
+
+dn: cn=videos,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: videos
+ou: video
+uniqueMember: uid=sethu,ou=people,dc=springframework,dc=org
+uniqueMember: uid=cibi,ou=people,dc=springframework,dc=org
